@@ -7,32 +7,30 @@
 <body>
 <table>
     <tr>
-        <th><label for="Amount">Amount</label></th>
+        <th>Amount</th>
         <th>From Currency</th>
         <th>To Currency</th>
         <th></th>
     </tr>
     <tr>
-        <td><input type="text" id="Amount"></td>
+        <td><input type="text" id="A"></td>
         <td>
-            <select id="From">
+            <select id="F">
                 <option value="VND">VND</option>
                 <option value="USD">USD</option>
             </select>
         </td>
         <td>
-            <select id="To">
+            <select id="T">
                 <option value="VND">VND</option>
-                <option  value="USD">USD</option>
+                <option value="USD">USD</option>
             </select>
         </td>
         <td><button onclick="ChangeMoney()">Convert</button></td>
     </tr>
 </table>
-
 <br>
 <p id="Result"></p>
 </body>
 </html>
-
 <script src="tiente.js"></script>
