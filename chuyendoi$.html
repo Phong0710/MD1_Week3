@@ -2,44 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-
-    </style>
+    <title>Chuyển đổi tiền tệ</title>
 </head>
-<body >
-<form>
+<body>
 <table>
-    <tr >
-        <th>Amount</th>
+    <tr>
+        <th><label for="Amount">Amount</label></th>
         <th>From Currency</th>
         <th>To Currency</th>
+        <th></th>
     </tr>
     <tr>
-        <td><input type="text"></td>
+        <td><input type="text" id="Amount"></td>
         <td>
-            <select>
-                <option value="VN">VND</option>
-                <option value="UK">USD</option>
+            <select id="From">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
             </select>
         </td>
         <td>
-            <select>
-                <option value="UK">USD</option>
-                <option value="VN">VND</option>
+            <select id="To">
+                <option value="VND">VND</option>
+                <option  value="USD">USD</option>
             </select>
-            <input type="submit" value="Convert">
         </td>
-    </tr>
-    <tr>
-        <td colspan="3"> Result </td>
-        <td></td>
-        <td></td>
+        <td><button onclick="ChangeMoney()">Convert</button></td>
     </tr>
 </table>
-</form>
+
+<br>
+<p id="Result"></p>
 </body>
 </html>
-<script >
-    let A =
-</script>
+
+<script src="tiente.js"></script>
