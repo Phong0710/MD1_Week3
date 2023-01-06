@@ -8,11 +8,13 @@ function ChangeMoney() {
     {
         Result = "Result:" + (A/23000) + "$";
     }
-    else if (F == "USD" && T == "VND")
+    else
+        if (F == "USD" && T == "VND")
     {
         Result = "Result:"+ (A*23000)+"VND";
     }
-    else if (F  == "USD" )
+    else
+        if (F  == "USD" && T =="USD" )
     {
         Result = "Result:"+ A + "$";
     }
@@ -20,5 +22,6 @@ function ChangeMoney() {
     {
         Result = "Result:"+ A + "VND";
     }
-    document.getElementById("Result").innerHTML = Result;
+   document.getElementById("Result").innerHTML = Result;
+
 }
