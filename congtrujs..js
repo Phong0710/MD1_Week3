@@ -7,6 +7,6 @@ function CONG() {
 function TRU() {
         let A = document.getElementById("ONE").value;
         let B = document.getElementById("TOW").value;
-        let D = A - B;
-    document.getElementById("kq").innerHTML= D;
+        let C = A - B;
+    document.getElementById("kq").innerHTML= C;
 }

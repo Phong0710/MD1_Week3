@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let Nam = parseInt(prompt("Nhập Năm ở đây"));
+  let NNhuan = false;
+  let Namchia4 = Nam % 4 == 0;
+  if (Namchia4) {
+    let Namchia100 = Nam % 100 == 0;
+    if (Namchia100) {
+        let Namchia400 = Nam % 400 ==0;
+        if (Namchia400) {
+            NNhuan = true;
+        }
+    } else {
+        NNhuan = true;
+    }
+  }
+  if (NNhuan) {
+      alert(Nam + " is a leap year");
+  } else {
+      alert(Nam + " is NOT a leap year");
+  }
+</script>
