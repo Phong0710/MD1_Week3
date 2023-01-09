@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="bong" src="https://tse1.mm.bing.net/th?id=OIP.t8z6K7RTZGuCu9aYb5YqzQHaHn&pid=Api&P=0" style="width:100px ">
+<br>
+<p>Click button below to move the image to right</p>
+<button onclick="moveRight()" >Sang Trái</button>
+<input type="button" value="Sang Phải" onclick="moveLeft()" >
+</body>
+</html>
+<script>
+    let img0bj = null;
+    img0bj = document.getElementById("bong");
+     function init(){
+        img0bj = document.getElementById("bong");
+        img0bj.style.position="relative";
+        img0bj.style.left = '0px';
+     }
+     document.write()
+     function moveRight() {
+        img0bj.style.left = parseInt(img0bj.style.left) +20 + 'px';
+     }
+     window.onload = init;
+    function moveLeft() {
+        img0bj.style.left = parseInt(img0bj.style.left) - 20 + 'px';
+    }
+    window.onload = init;
+</script>
