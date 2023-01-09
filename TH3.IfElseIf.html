@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let tk = prompt("Nhap TK");
+  if (tk == "Admin") {
+    let mk = prompt("Nhap mk");
+    if (mk == "TheMaster") {
+      alert("wellcome");
+    } else if (mk == "") {
+      alert("Canceld");
+    } else {
+      alert("Wrong password");
+    }
+  } else if (tk == "") {
+    alert("Canceld");
+  } else {
+    alert("I dont know you");
+  }
+</script>
