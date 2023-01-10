@@ -1,71 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    button {
-      width: 100%;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 100%;
+        }
 
-  </style>
+    </style>
 </head>
 <body>
 
 
-  <table border="1">
+<table border="1">
     <tr>
-      <td colspan="4" ><input type="text" id="nhap"></td>
+        <td colspan="4"><input type="text" id="nhap"></td>
     </tr>
     <tr>
-      <td><button type="button"  value ="1" onclick="nhapphim(1)"> 1 </button></td>
-      <td><button type="button"  value ="2" onclick="nhapphim('2')"> 2 </button></td>
-      <td><button type="button"  value ="3"  onclick="nhapphim('3')"> 3 </button></td>
-      <td><button type="button"  value ="+" onclick="nhapphim('+')"> + </button></td>
+        <td>
+            <button type="button" value="1" onclick="nhapphim(1)"> 1</button>
+        </td>
+        <td>
+            <button type="button" value="2" onclick="nhapphim('2')"> 2</button>
+        </td>
+        <td>
+            <button type="button" value="3" onclick="nhapphim('3')"> 3</button>
+        </td>
+        <td>
+            <button type="button" value="+" onclick="nhapphim('+')"> +</button>
+        </td>
     </tr>
 
     <tr>
-      <td><button type="button" value ="4" onclick="nhapphim('4')"> 4 </button></td>
-      <td><button type="button" value ="5" onclick="nhapphim('5')"> 5 </button></td>
-      <td><button type="button" value ="6" onclick="nhapphim('6')"> 6 </button></td>
-      <td><button type="button" value ="-" onclick="nhapphim('-')"> - </button></td>
+        <td>
+            <button type="button" value="4" onclick="nhapphim('4')"> 4</button>
+        </td>
+        <td>
+            <button type="button" value="5" onclick="nhapphim('5')"> 5</button>
+        </td>
+        <td>
+            <button type="button" value="6" onclick="nhapphim('6')"> 6</button>
+        </td>
+        <td>
+            <button type="button" value="-" onclick="nhapphim('-')"> -</button>
+        </td>
     </tr>
     <tr>
-      <td><button type="button" value ="7" onclick="nhapphim('7')"> 7 </button></td>
-      <td><button type="button" value ="8" onclick="nhapphim('8')"> 8 </button></td>
-      <td><button type="button" value ="9" onclick="nhapphim('9')"> 9</button></td>
-      <td><button type="button" value ="*" onclick="nhapphim('*')"> * </button></td>
+        <td>
+            <button type="button" value="7" onclick="nhapphim('7')"> 7</button>
+        </td>
+        <td>
+            <button type="button" value="8" onclick="nhapphim('8')"> 8</button>
+        </td>
+        <td>
+            <button type="button" value="9" onclick="nhapphim('9')"> 9</button>
+        </td>
+        <td>
+            <button type="button" value="*" onclick="nhapphim('*')"> *</button>
+        </td>
     </tr>
     <tr>
-      <td><button type="button" value="" onclick="xoa()"> C </button></td>
-      <td><button type="button" value="0" onclick="nhapphim('0')"> 0 </button></td>
-      <td><button  name= "Bang" onclick="Bang()"> = </button></td>
-      <td><button type="button" value ="/" onclick="nhapphim('/')"> / </button></td>
+        <td>
+            <button type="button" value="" onclick="xoa()"> C</button>
+        </td>
+        <td>
+            <button type="button" value="0" onclick="nhapphim('0')"> 0</button>
+        </td>
+        <td>
+            <button name="Bang" onclick="Bang()"> =</button>
+        </td>
+        <td>
+            <button type="button" value="/" onclick="nhapphim('/')"> /</button>
+        </td>
     </tr>
-  </table>
-
-
+</table>
 
 
 </body>
 </html>
 <script>
 
-  function nhapphim(value){
-    document.getElementById("nhap").value += value;
-  }
-  function xoa() {
-    document.getElementById("nhap").value = "";
+    function nhapphim(value) {
+        document.getElementById("nhap").value += value;
+    }
 
-  }
-  function Bang(){
-    // let a = document.getElementById("nhap").value;
-    // let bang = eval(a);
-    // document.getElementById("nhap").value = bang;
-    // document.getElementById("nhap").value = bang;
-    document.getElementById("nhap").value = eval(document.getElementById("nhap").value)
-  }
+    function xoa() {
+        document.getElementById("nhap").value = "";
+
+    }
+
+    function Bang() {
+        // let a = document.getElementById("nhap").value;
+        // let bang = eval(a);
+        // document.getElementById("nhap").value = bang;
+        // document.getElementById("nhap").value = bang;
+        document.getElementById("nhap").value = eval(document.getElementById("nhap").value)
+    }
 
 </script>
