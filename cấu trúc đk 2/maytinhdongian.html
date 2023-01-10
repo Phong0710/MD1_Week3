@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <table border="1">
+    <tr>
+      <td colspan="4" ><input type="text" id="view"></td>
+    </tr>
+    <tr>
+      <td><button type="button" name="btn" value ="1" onclick="inputValue(value)"> 1 </button></td>
+      <td><button type="button" name="btn" value ="2" onclick="inputValue(value)"> 2 </button></td>
+      <td><button type="button" name="btn" value ="3"  onclick="inputValue(value)"> 3 </button></td>
+      <td><button type="button" name="op" value ="+"onclick="inputValue(value)"> + </button></td>
+    </tr>
+
+    <tr>
+      <td><button type="button" name="btn" value ="4" onclick="inputValue(value)"> 4 </button></td>
+      <td><button type="button" name="btn" value ="5" onclick="inputValue(value)"> 5 </button></td>
+      <td><button type="button" name="btn" value ="6" onclick="inputValue(value)"> 6 </button></td>
+      <td><button type="button" name="op" value ="-" onclick="inputValue(value)"> - </button></td>
+    </tr>
+    <tr>
+      <td><button type="button" name="btn" value ="7" onclick="inputValue(value)"> 7 </button></td>
+      <td><button type="button" name="btn" value ="8" onclick="inputValue(value)"> 8 </button></td>
+      <td><button type="button" name="btn" value ="9" onclick="inputValue(value)"> 9</button></td>
+      <td><button type="button" name="op" value ="*" onclick="inputValue(value)"> * </button></td>
+    </tr>
+    <tr>
+      <td><button type="button" onclick="xoa();"> AC </button></td>
+      <td><button type="button" name="btn" onclick="inputValue(value)"> 0 </button></td>
+      <td><button  name= "Bang" onclick="Bang();"> = </button></td>
+      <td><button type="button" name="op" value ="/" onclick="inputValue(value)"> / </button></td>
+    </tr>
+  </table>
+
+
+
+</script>
+</body>
+</html>
+<script>
+  let view = document.getElementById("view");
+  function inputValue(value) {
+    view.value += value;
+  }
+  function Bang() {
+    let Bang = eval(view.value);
+    view.value = Bang;
+  }
+  function xoa() {
+    view.value="";
+  }
+
+</script>
