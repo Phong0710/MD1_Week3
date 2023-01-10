@@ -41,7 +41,7 @@
     <tr>
       <td><button type="button" value="" onclick="xoa()"> C </button></td>
       <td><button type="button" value="0" onclick="nhapphim('0')"> 0 </button></td>
-      <td><button  name= "Bang" onclick="Bang();"> = </button></td>
+      <td><button  name= "Bang" onclick="Bang()"> = </button></td>
       <td><button type="button" value ="/" onclick="nhapphim('/')"> / </button></td>
     </tr>
   </table>
@@ -61,9 +61,11 @@
 
   }
   function Bang(){
-    let a = document.getElementById("nhap").value;
-    let bang = eval(a);
-    document.getElementById("nhap").value = bang;
+    // let a = document.getElementById("nhap").value;
+    // let bang = eval(a);
+    // document.getElementById("nhap").value = bang;
+    // document.getElementById("nhap").value = bang;
+    document.getElementById("nhap").value = eval(document.getElementById("nhap").value)
   }
 
 </script>
