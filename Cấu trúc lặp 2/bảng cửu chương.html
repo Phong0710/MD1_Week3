@@ -5,6 +5,22 @@
   <title>Title</title>
 </head>
 <body>
+<h2>Bảng cửu chương</h2>
+
 
 </body>
 </html>
+<script>
+  let a = '<table border="1" cellSpacing="0" width="800px" >';
+  for(i=1;i<=10;i++) {
+    a = a + "<tr>";
+    for(j=1;j<=9;j++) {
+      a = a + "<td>" + j+"*"+i+"=" +i*j;
+    }
+  }
+  document.write(a);
+
+
+
+
+</script>
