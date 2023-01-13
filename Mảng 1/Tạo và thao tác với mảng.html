@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<button type="button" onclick="add()">Add</button>
+<button type="button" onclick="display()" >Display</button>
+<br>
+
+<p id="ppp"></p>
+</body>
+</html>
+<script>
+   let x=0;
+    let array_ = [];
+
+  function add() {
+      array_.push(document.getElementById("input").value);
+      alert("Phần tử thứ "+x+" là " + array_[x]);
+      x++;
+    }
+    function display(){
+        let b = "<hr/";
+      for(i=0;i<array_.length;i++){
+          document.getElementById("ppp").innerHTML= array_;
+      }
+    }
+</script>
