@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input1" placeholder="Nhập a">
+<input id="input2" placeholder="Nhập b">
+<input id="input3" placeholder="Nhập c">
+<hr>
+<button onclick="cau1()" >Câu 1</button> in các số từ a đến b<br>
+<p id="aaa"></p>
+<button onclick="cau2()">Câu 2</button>in các số từ a đến b, mỗi số trong 1 thẻ h1<br>
+<p id="sss"></p>
+<button onclick="cau3()">Câu 3</button>in các số từ a đến b, số chẳn trong 1 thẻ h1 - lẽ h2<br>
+<p id="ddd"></p>
+<button onclick="cau4()">Câu 4</button>tính tích từ a đến b<br>
+<p id="fff"></p>
+<button onclick="cau5()">Câu 5</button>tính tích các số từ a đến b chia hết cho 5<br>
+<p id="ggg"></p>
+<button onclick="cau6()">Câu 6</button>đếm các số chia hết cho 7 từ a đến b<br>
+<p id="hhh"></p>
+<button onclick="cau7()">Câu 7</button>chia 3 = fizz; chia 5 = buzz; cả 2 = fizzbuzz<br>
+<p id="jjj"></p>
+<hr>
+
+
+<button onclick="test1()">Câu a</button> nhập a hiển thị C,S hình vuông cạnh a<br>
+<p id="ppp"></p>
+<button onclick="test2()">Câu b</button>nhập A và b tính a^2 và a^b<br>
+<p id="www"></p>
+<button onclick="test3()">Câu c</button>nhập vào a và b tính tổng từ a đến b<br>
+<p id="eee"></p>
+<button onclick="test4()">Câu d</button>Nhập vào a là năm in ra thế kỷ<br>
+<p id="rrr"></p>
+<button onclick="test5()">Câu e</button>Kiểm tra 3 cạnh a b c là tam giác gì?<br>
+<p id="ttt"></p>
+<br>
+
+
+
+</body>
+</html>
+<script>
+
+
+    //bài1 : in các số từ a đến b
+    function cau1() {
+        let a = parseFloat(document.getElementById("input1").value);
+        let b = parseFloat(document.getElementById("input2").value);
+        for (let i = a; i <= b; i++) {
+            document.getElementById("aaa").innerHTML += " Các số từ a đến b là :"+i+"<br>";
+        }
+    }
+
+   // bài2 : in các số từ a đến b, mỗi số trong 1 thẻ h1
+    function cau2(){
+    let a = parseFloat(document.getElementById("input1").value);
+    let b = parseFloat(document.getElementById("input2").value);;
+    for (let i = a; i<=b ; i++) {
+        document.getElementById("sss").innerHTML +="<h1>"+i;
+    }
+    }
+    //bài3 : in các số từ a đến b, số chẳn trong 1 thẻ h1 - lẽ h2
+    function cau3() {
+        let a = parseFloat(document.getElementById("input1").value);
+        let b = parseFloat(document.getElementById("input2").value);
+        for (let i = a; i <= b; i++) {
+            if (i % 2 == 0) {
+                document.getElementById("ddd").innerHTML +="<h1>" + i;
+                i++;
+            }
+            if (i % 2 != 0) {
+                document.getElementById("ddd").innerHTML +="<h2>" + i;
+            }
+        }
+    }
+
+   // bai4  : tính tích từ a đến b
+    function cau4() {
+        let a = parseFloat(document.getElementById("input1").value);
+        let b = parseFloat(document.getElementById("input2").value);
+        let c = 1;
+        for (let i = a; i <= b; i++) {
+            c *= i;
+            document.getElementById("fff").innerHTML = "tích từ " + a + " đến " + b + " là " + c + '<br>';
+        }
+    }
+  //  bài5 : tính tích các số từ a đến b chia hết cho 5
+    function cau5() {
+        let a = parseFloat(document.getElementById("input1").value);
+        let b = parseFloat(document.getElementById("input2").value);
+        let c = 1;
+        for (let i = a; i <= b; i++) {
+            if (i % 5 == 0) {
+                c *= i;
+            }
+
+        }
+        document.getElementById("ggg").innerHTML += "tích từ " + a + " đến " + b + " là " + c + '<br>';
+    }
+  //  bài 6: đếm các số chia hết cho 7 từ a đến b
+    function cau6() {
+        let a = parseFloat(document.getElementById("input1").value);
+        let b = parseFloat(document.getElementById("input2").value);
+        let count = 0;
+        for (let i = a; i <= b; i++) {
+            if (i % 7 == 0) {
+                count++;
+            }
+        }
+        document.getElementById("hhh").innerHTML += count + ' số chia hết cho 7';
+    }
+   // baif7: chia 3 = fizz; chia 5 = buzz; cả 2 = fizzbuzz
+    function cau7() {
+        let a = parseFloat(document.getElementById("input1").value);
+        let b = parseFloat(document.getElementById("input2").value);
+        for (let i = a; i <= b; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                document.getElementById("jjj").innerHTML +=i + " FizzBuzz <br>";
+            } else if (i % 3 == 0) {
+                document.getElementById("jjj").innerHTML +=i + " Fizz<br>";
+            } else if (i % 5 == 0) {
+                document.getElementById("jjj").innerHTML +=i + ' Buzz<br>';
+            }
+        }
+    }
+    //////////////////////////////////////////
+
+    //a. nhập a hiển thị C,S hình vuông cạnh a
+    function test1() {
+        //Câu a: Tinh chu vi va dien tich hinh vuong canh a;
+        let a = parseFloat(document.getElementById("input1").value);
+        let C = a * 4;
+        let S = a * a;
+        document.getElementById("ppp").innerHTML = "Chu vi  " + C + "<br>" + "Diện tích là: " + S;
+    }
+
+    //Câu b: nhập A và b tính a^2 và a^b
+    function test2(){
+        let a = parseFloat(document.getElementById("input1").value);
+        let b = parseFloat(document.getElementById("input2").value);
+        let q = Math.pow(a, 2);
+        let w = Math.pow(a, b);
+        document.getElementById("www").innerHTML = "a^2 =  " + q + "<br>" + "a^b =  " + w;
+    }
+    //câu c: nhập vào a và b tính tổng từ a đến b
+    function test3(){
+        let a = parseFloat(document.getElementById("input1").value);
+        let b = parseFloat(document.getElementById("input2").value);
+        let sum=0;
+        for (let i = a; i <=b ; i++) {
+            sum+=i;
+            document.getElementById("eee").innerHTML = ` Tổng từ a đến b là : `+ sum;
+        }
+    }
+
+    //câu d: Nhập vào a là năm in ra thế kỷ
+    function test4() {
+        let a = parseFloat(document.getElementById("input1").value);
+        let q = parseInt(a / 100)
+        if(a%100==0) {
+            document.getElementById("rrr").innerHTML = ` Năm ` + a + 'là thế kỷ ' + q;
+        }
+        else {
+            document.getElementById("rrr").innerHTML = ` Năm ` + a + ' là thế kỷ ' + (q+1);
+        }
+    }
+    //câu e: Kiểm tra 3 cạnh a b c là tam giác gì?
+    function test5(){
+        let a = parseFloat(document.getElementById("input1").value);
+        let b = parseFloat(document.getElementById("input2").value);
+        let c = parseFloat(document.getElementById("input3").value);
+        if (a + b > c && a + c > b && b + c > a) {
+            document.getElementById("ttt").innerHTML = a + ", " + b + ", " + c + " là số đo 3 cạnh 1 tam giác.";
+            if (a === b || b === c || c === a) {
+                document.getElementById("ttt").inertHTML = "Đây là tam giác cân!!!";
+            } else if (a === b && a === c && b === c) {
+                document.getElementById("ttt").inertHTML = "Đây là tam giác đều!!!";
+            } else if (Math.pow(a,2) + Math.pow(b,2) === Math.pow(c,2) || Math.pow(a,2) + Math.pow(c,2) === Math.pow(b,2) || Math.pow(b,2) + Math.pow(c,2) === Math.pow(a,2)) {
+                document.getElementById("ttt").innerHTML = "Đây là tam giác vuông!!!";
+            }
+        } else {
+            document.getElementById("ttt").innerHTML = a + ", " + b + ", " + c + " KHÔNG phải là số đo 3 cạnh 1 tam giác.";
+        }
+    }
+</script>
