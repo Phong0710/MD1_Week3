@@ -9,13 +9,12 @@
 </body>
 </html>
 <script>
-  let a = [5,1,4,8,10,6];
-  for ( i=0, j = a.length-1;i<a.length-1;i++,j--) {
-     a[i]= new a[j];
-     a[j]=a[i];
-     document.write(a[i])
-  }
+    let a = [5, 1, 4, 8, 10, 6];
+    for (i = 0, j=a.length; i < (a.length - 1)/2, j > i; i++, j--) {
+        a[i] =new b();
+        b[i] = a[j];
 
+    }document.write(a)
 
 
 </script>
