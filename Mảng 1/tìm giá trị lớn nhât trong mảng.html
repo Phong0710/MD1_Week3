@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a =[1,3,4,2,8,6,9,7];
+    let max = a[0];
+    let min=0;
+    for (let i = 0; i < a.length-1; i++) {
+        if(max<a[i]){
+            max=a[i];
+            min=i;
+        }
+    }document.write("số lớn nhất là : "+max+" tại vị trí "+min );
+</script>
