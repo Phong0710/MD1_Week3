@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="qqq" placeholder="Nhập từ">
+<button onclick="Click()">Dich</button>
+<p id="www"></p>
+</body>
+</html>
+<script>
+    function Click() {
+        let a = ["Cam", "Bút", "Chuối"]
+        let b = ["Origan", "Pen", "Banana"]
+        let input = document.getElementById("qqq").value;
+        for (let i = 0; i < a.length; i++) {
+            if (input === a[i]) {
+                document.getElementById("www").innerHTML=b[i];
+            }
+        }
+    }
+</script>
