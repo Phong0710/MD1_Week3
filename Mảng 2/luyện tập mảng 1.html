@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //bai1:
+    // let a=[1,2,3,4,5,6,7,8,9];
+    // let b =0;
+    // for (let i = 0; i <a.length ; i++) {
+    //   if(a[i]>=5){
+    //     b++;
+    //     document.write(a[i]+' vị trí '+b +'<br>')
+    //   }
+    // }
+
+    //bai2:
+    // let a=[0,1,2,3,7,8,9,4,5,6]
+    // let max=0;
+    // let dem=0;
+    // for (let i = 0; i < a.length; i++) {
+    //   if(a[i]>max){
+    //     max=a[i];
+    //     dem++;
+    //   }
+    // }document.write(max+" là giá trị lớn nhất tại vị trí "+dem);
+
+    //bai3
+    // let a = [0, 1, 2, 3, 7, 8, 9, 4, 5, 6]
+    // let max = 0;
+    // let vt = 0;
+    // let tb = 0
+    // for (let i = 0; i < a.length; i++) {
+    //     tb += a[i];
+    //     if (a[i] > max) {
+    //         max = a[i];
+    //         vt=i;
+    //     }
+    // }
+    // let c = tb/a.length;
+    // document.write(max + " là giá trị lớn nhất tại vị trí " + vt+'<br>');
+    // document.write(c + " là giá trị trung bình" );
+
+    //bai 4
+    // let a = prompt("nhập vào a");
+    // let b = (a.split(''));
+    // c = b.reverse()
+    // alert(c.join(''));
+
+
+    //bai5:
+    // let a = [1,0,-2,3,-4,5,-6,7,-8,9];
+    // let dem=0;
+    // for (let i = 0; i < a.length; i++) {
+    //     if(a[i]<0){
+    //         dem++;
+    //     }
+    // }document.write(dem);
+
+    //bai6
+    // let a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1,1];
+    // let V = parseInt(prompt("Nhập V"));
+    // let vt = [];
+    // for (let i = 0; i < a.length; i++) {
+    //     if (V == a[i]) {
+    //         vt.push(i);
+    //         // break;
+    //     }
+    // }
+    // if (vt != []) {
+    //     alert("Chúc mừng có nhé "+ vt)
+    //
+    // } else {
+    //     alert("Sai rồi nhe ")
+    // }
+
+    //bai7
+    // let a = [0, 1, 2, 3, 5, 5, 6, 7, 8, 9];
+    // let V = parseInt(prompt("Nhập V"));
+    // for (let i = 0; i < a.length; i++) {
+    //     if (V == a[i]) {
+    //         a.splice(i, 1);
+    //         a.push(0);
+    //     }
+    // }
+    // document.write(a);
+
+    //bai8
+    // let a = [2, 3, 5, 1, 4, 6, 8, 7, 0, 9]
+    // let b = a.sort(function (a, b) {
+    //     return;
+    // })
+    //
+    // a.sort(function (a, b) {
+    //     return b - a;
+    // })
+    // alert(b)
+
+    //bai9
+    let a = [0,1,2,3,4,5,6,7,8,9]
+    let b = [9,8,7,6,5,4,3,2,1,0]
+    let c = b.concat(a);
+    document.write(c)
+
+</script>
