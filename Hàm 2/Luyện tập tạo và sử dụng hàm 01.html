@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="alertMessage()">Câu 1</button>
+<hr>
+<input type="text" id="qqq">
+<button onclick="inRaTang1()">Câu 2</button>
+<p id="aaa"></p>
+<hr>
+<input type="text" id="www" placeholder="a">
+<input type="text" id="eee" placeholder="b">
+<button onclick="ssCong()">Câu 3</button>
+<p id="sss"></p>
+<hr>
+<button onclick="al()">Cau 4</button>
+<hr>
+<button onclick="tudien()">Cau 5</button>
+<br>
+<p id="ddd"></p>
+<hr>
+
+</body>
+</html>
+<script>
+    //bai1
+    function alertMessage() {
+        alert("Xin chao")
+    }
+
+    //bai2
+    function inRaTang1() {
+        let a = parseInt(document.getElementById("qqq").value);
+        tanggiatri(a)
+    }
+
+    function tanggiatri(a) {
+        a++;
+        document.getElementById("aaa").innerHTML = a;
+    }
+
+    //bai3
+
+    function ssCong() {
+        let a = parseInt(document.getElementById("www").value);
+        let b = parseInt(document.getElementById("eee").value);
+        ss(a, b)
+    }
+
+    function ss(a, b) {
+        if (a > b) {
+            document.getElementById("sss").innerHTML = a + " lớn hơn " + b;
+        } else {
+            let sum = a + b;
+            document.getElementById("sss").innerHTML = sum;
+        }
+    }
+
+    //bai4
+    function al() {
+        function addNumbers() {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            return result;
+        }
+
+        result = 0;
+        alert("Trước gọi hàm " + result)
+        result = addNumbers();
+        alert("Sau gọi hàm " + result)
+    }
+
+    //bai5
+    function tudien() {
+        let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+        let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+        let c = prompt("Nhap ten:");
+        for (let i = 0; i < a.length; i++) {
+            if (c === a[i]) {
+                document.getElementById("ddd").innerHTML = b[i];
+                return;
+            } else {
+                document.getElementById("ddd").innerHTML = "không tìm thấy"
+            }
+        }
+
+
+    }
+</script>
