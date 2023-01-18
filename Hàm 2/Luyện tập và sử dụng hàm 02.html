@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="qqq">
+<button onclick="binhphuong()">Cau 1</button>
+<br>
+<p id="aaa"></p>
+<hr>
+<input type="text" id="www">
+<button onclick="cS()">Cau 2</button>
+<br>
+<p id="sss"></p>
+<hr>
+<input type="text" id="eee">
+<button onclick="giaiThua()">Cau 3</button>
+<br>
+<p id="ddd"></p>
+<hr>
+<input type="text" id="rrr">
+<button onclick="tF()">Cau 4</button>
+<br>
+<p id="fff"></p>
+<hr>
+<input type="text" id="ttt1" placeholder="Nhập A">
+<input type="text" id="ttt2" placeholder="Nhập B">
+<input type="text" id="ttt3" placeholder="Nhập C">
+<button onclick="Min()">Cau 5</button>
+<br>
+<p id="ggg"></p>
+<hr>
+<input type="text" id="yyy">
+<button onclick="test()">Cau 6</button>
+<br>
+<p id="hhh"></p>
+<hr>
+<input type="text" id="uuu1">
+<input type="text" id="uuu2">
+<button onclick="Hoan()">Cau 7</button>
+<br>
+<p id="jjj"></p>
+<hr>
+<button onclick="daonguoc()">Cau 8</button>
+<br>
+<p id="kkk"></p>
+<hr>
+<input type="text" id="ooo">
+<button onclick="hamTruyen()">Cau 9</button>
+<br>
+<p id="lll"></p>
+</body>
+</html>
+<script>
+    //cau1
+    function binhphuong() {
+        let a = document.getElementById("qqq").value;
+        sum = Math.pow(a, 2);
+        document.getElementById("aaa").innerHTML = sum
+    }
+
+    //CÂu 2
+    function cS() {
+        let a = document.getElementById("www").value;
+        Math.PI;
+        C = (1 / 2) * Math.PI * a;
+        S = Math.PI * Math.pow(a, 2);
+        document.getElementById("sss").innerHTML = 'Chu vi = ' + C + "<br>" + "Dien tich = " + S;
+    }
+
+    //cau 3
+    function giaiThua() {
+        let a = document.getElementById("eee").value;
+        let d = 1;
+        for (let i = 1; i <= a; i++) {
+            d *= i
+
+        }
+        document.getElementById("ddd").innerHTML = d;
+    }
+
+    //cau 4
+    function tF() {
+        let a = parseInt(document.getElementById("rrr").value);
+        let b = a * 1;
+        if (b === a) {
+            document.getElementById('fff').innerHTML = "True";
+        } else {
+            document.getElementById('fff').innerHTML = "false";
+        }
+    }
+
+    // câu 5
+    function Min() {
+        let a = document.getElementById("ttt1").value;
+        let b = document.getElementById("ttt2").value;
+        let c = document.getElementById("ttt3").value;
+        if (a < b && a < c) {
+            document.getElementById('ggg').innerHTML = a + " Là nhỏ nhât"
+        }
+        if (b < a && b < c) {
+            document.getElementById('ggg').innerHTML = b + " Là nhỏ nhât"
+        }
+        if (c < a && c < b) {
+            document.getElementById('ggg').innerHTML = c + " Là nhỏ nhât"
+        }
+    }
+
+    //bai6
+    function test() {
+        let a = parseInt(document.getElementById("yyy").value);
+        if (a > 0) {
+            document.getElementById('hhh').innerHTML = 'true'
+            return;
+        } else {
+            document.getElementById('hhh').innerHTML = 'false'
+        }
+    }
+
+    // bai7
+    function Hoan() {
+        let a = parseInt(document.getElementById("uuu1").value);
+        let b = parseInt(document.getElementById("uuu2").value);
+        let c = 0;
+        c = a;
+        a = b;
+        b = c;
+        document.getElementById('jjj').innerHTML = "a = " + a + "<br>" + "b = " + b;
+    }
+
+    //bai8
+    function daonguoc() {
+        const arr8 = [1, 2, 3, 4, 5];
+
+        function daox(arr) {
+            arr.reverse()
+        }
+
+        daox(arr8);
+        document.getElementById('kkk').innerHTML = arr8
+        console.log(arr8);
+    }
+
+    //bai9
+    function hamTruyen() {
+        const arr9 = ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+        let a = document.getElementById("ooo").value;
+        let dem = 0;
+        for (let i = 0; i < arr9.length; i++) {
+            if (arr9[i] === a) {
+                dem++;
+            }
+        }
+        if (dem != 0) {
+            document.getElementById("lll").innerHTML = "Số lần xuất hiện : " + dem;
+        } else {
+            document.getElementById("lll").innerHTML = "-1"
+        }
+    }
+</script>
